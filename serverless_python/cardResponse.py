@@ -48,6 +48,14 @@ def getCardContainer(container_type):
 
 
 	return {
+		"fulfillmentMessages": [
+		{
+			"card": {
+				"title": card_text['text_to_speech'],
+				"subtitle": card_text['formatted_text'],
+				"imageUri": card_text['image_url']
+			}
+		}],
 		"payload": {
 			"google": {
 				"expectUserResponse": True,

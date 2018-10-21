@@ -64,7 +64,7 @@ def getWaste(original, waste, queryText):
         
     elif len(wastes) == 1:
         waste = wastes[0][0] or wastes[0][1]
-        response = generateResponse(waste)
+        response = getCardContainer('yellow container') #generateResponse(waste)
 
     else:
         response = CheckSynonyms(queryText)
@@ -200,7 +200,7 @@ def CheckSynonyms(query):
 	if len(matches) == 0:
 		return generateResponse("I don't understund, retray")
 	elif len(matches) == 1:
-		return generateResponse( matches[0][0] or matches[0][1])
+		return  ( matches[0][0] or matches[0][1])
 	elif len(matches) > 1:
         # return generateResponse("I don't understund, retray")
         dist = {}
